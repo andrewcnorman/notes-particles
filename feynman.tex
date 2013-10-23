@@ -1,0 +1,167 @@
+
+\section{Feynman diagrams}
+
+When the American physicist Richard Feynman wanted to calculate the probability of interactions occurring, he drew a set of diagrams to show all possible outcome.  These apparently simple diagrams allow very complex calculations to be solved easily.  
+
+Feynman diagrams represent particle interactions -- the angles between the particle lines are not significant, only the sequence of events.  The interaction itself is shown via an exchange particle.
+
+\subsection{$\beta^{-}$ decay}
+A neutron decays into a proton (a down quark changes into an up quark), emitting a beta particle and an antielectron neutrino:
+\[\mathrm{n}\longrightarrow\mathrm{p}\mathrm{e}^{-}\bar{\nu}_{\mathrm{e}}\]
+
+\noindent \begin{minipage}{0.4\textwidth}\begin{tikzpicture}
+\draw[style={boson}]
+  (0, 0) -- node[below] {$\mathrm{W}^{-}$} (2,0) ;
+   \draw[->] (0.5,-0.6)--(1.5,-0.6);
+    \draw[style={electron}]
+   (-1, -2) -- node[left] {n}(0, 0);
+  \draw[style={electron}]
+  (0, 0) -- node[left] {p}(-1, 2) ;
+  \draw[style={electron}]
+   (2, 0)  -- node[right] {e$^{-}$}(1, 2) ;
+  \draw[style={electron}]
+  (2, 0) -- node[right] {$\bar{\nu}_{\mathrm{e}}$}(3, 2) ;
+\end{tikzpicture} \end{minipage}\begin{minipage}[c]{0.1\textwidth}OR\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{tikzpicture}
+\draw[style={boson}]
+  (0, 0) -- node[below] {$\mathrm{W}^{-}$} (2,0) ;
+   \draw[->] (0.5,-0.6)--(1.5,-0.6);
+    \draw[style={electron}]
+   (-1, -2) node[below] {d}-- (0, 0);
+  \draw[style={electron}]
+  (0, 0)  -- (-1, 2) node[above] {u};
+  \draw[style={electron}]
+   (-1.2, -2) node[below] {d}-- (-0.2, 0);
+  \draw[style={electron}]
+  (-0.2, 0)  -- (-1.2, 2) node[above] {d};
+  \draw[style={electron}]
+   (-1.4, -2) node[below=2.5pt] {u}-- (-0.4, 0);
+  \draw[style={electron}]
+  (-0.4, 0)  -- (-1.4, 2) node[above] {u};
+  \draw[style={electron}]
+   (2, 0)  -- node[right] {e$^{-}$}(1, 2) ;
+  \draw[style={electron}]
+  (2, 0) -- node[right] {$\bar{\nu}_{\mathrm{e}}$}(3, 2) ;
+\end{tikzpicture}  
+\end{minipage}
+
+\subsection{$\beta^{+}$ decay}
+A proton decays into a neutron, emitting a neutrino and positron:
+\[\mathrm{p}\longrightarrow\mathrm{n}\mathrm{e}^{+}\nu_{\mathrm{e}}\]
+
+\noindent \begin{minipage}{0.4\textwidth}\begin{tikzpicture}
+\draw[style={boson}]
+  (0, 0) -- node[below] {$\mathrm{W}^{+}$} (2,0) ;
+   \draw[->] (0.5,-0.6)--(1.5,-0.6);
+    \draw[style={electron}]
+   (-1, -2) -- node[left] {p}(0, 0);
+  \draw[style={electron}]
+  (0, 0) -- node[left] {n}(-1, 2) ;
+  \draw[style={electron}]
+   (2, 0)  -- node[right] {e$^{+}$}(1, 2) ;
+  \draw[style={electron}]
+  (2, 0) -- node[right] {$\nu_{\mathrm{e}}$}(3, 2) ;
+\end{tikzpicture} \end{minipage}\begin{minipage}[c]{0.1\textwidth}OR\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{tikzpicture}
+\draw[style={boson}]
+  (0, 0) -- node[below] {$\mathrm{W}^{+}$} (2,0) ;
+   \draw[->] (0.5,-0.6)--(1.5,-0.6);
+    \draw[style={electron}]
+   (-1, -2) node[below=2.5pt] {u}-- (0, 0);
+  \draw[style={electron}]
+  (0, 0)  -- (-1, 2) node[above] {d};
+  \draw[style={electron}]
+   (-1.2, -2) node[below] {d}-- (-0.2, 0);
+  \draw[style={electron}]
+  (-0.2, 0)  -- (-1.2, 2) node[above] {d};
+  \draw[style={electron}]
+   (-1.4, -2) node[below=2.5pt] {u}-- (-0.4, 0);
+  \draw[style={electron}]
+  (-0.4, 0)  -- (-1.4, 2) node[above] {u};
+  \draw[style={electron}]
+   (2, 0)  -- node[right] {e$^{+}$}(1, 2) ;
+  \draw[style={electron}]
+  (2, 0) -- node[right] {$\nu_{\mathrm{e}}$}(3, 2) ;
+\end{tikzpicture}  
+\end{minipage}
+
+
+\subsection{Electron capture}
+
+An orbiting electron can be absorbed by a proton in the nucleus:
+\[\mathrm{p}\mathrm{e}^{-}\longrightarrow\mathrm{n}\nu_{\mathrm{e}}\]
+
+\begin{tikzpicture}
+\draw[style={boson}]
+ (0, 0) -- node[below] {$\mathrm{W}^{+}$} (2,0) ;
+   \draw[->] (0.5,-0.6)--(1.5,-0.6);
+      \draw[style={electron}]
+   (-1, -2) -- node[left] {p} (0, 0);
+  \draw[style={electron}]
+  (0, 0) -- node[left] {n} (-1, 2) ;
+  \draw[style={electron}]
+   (3, -2)  -- node[right] {$\mathrm{e}^{-}$} (2, 0) ;
+  \draw[style={electron}]
+  (2, 0) -- node[right] {$\nu_{\mathrm{e}}$} (3, 2) ;
+\end{tikzpicture}
+
+
+\subsection{Neutrino--neutron collisions}
+A neutron can absorb a neutrino, turning into a proton and electron:
+\[\mathrm{n}\nu_{\mathrm{e}}\longrightarrow\mathrm{p}\mathrm{e}^{-}\]
+
+\begin{tikzpicture}
+\draw[style={boson}]
+ (0, 0) -- node[below] {$\mathrm{W}^{+}$} (2,0) ;
+   \draw[->] (1.5,-0.6)--(0.5,-0.6);
+      \draw[style={electron}]
+   (-1, -2) -- node[left] {n} (0, 0);
+  \draw[style={electron}]
+  (0, 0) -- node[left] {p} (-1, 2) ;
+  \draw[style={electron}]
+   (3, -2)  -- node[right] {$\nu_{\mathrm{e}}$} (2, 0) ;
+  \draw[style={electron}]
+  (2, 0) -- node[right] {$\mathrm{e}^{-}$} (3, 2) ;
+\end{tikzpicture}
+
+\subsection{Antineutrino--proton collisions}
+A proton can absorb an anti electron neutrino, becoming a neutron and emitting a positron:
+\[\mathrm{p}\nu_{\mathrm{e}}\longrightarrow\mathrm{n}\mathrm{e}^{+}\]
+
+\begin{tikzpicture}
+\draw[style={boson}]
+ (0, 0) -- node[below] {$\mathrm{W}^{+}$} (2,0) ;
+   \draw[->] (0.5,-0.6)--(1.5,-0.6);
+      \draw[style={electron}]
+   (-1, -2) -- node[left] {p} (0, 0);
+  \draw[style={electron}]
+  (0, 0) -- node[left] {n} (-1, 2) ;
+  \draw[style={electron}]
+   (3, -2)  -- node[right] {$\bar{\nu_{\mathrm{e}}}$} (2, 0) ;
+  \draw[style={electron}]
+  (2, 0) -- node[right] {$\mathrm{e}^{+}$} (3, 2) ;
+\end{tikzpicture}
+
+\subsection{Electron--proton collisions}
+
+An electron can collide with a proton, emitting a neutron and a neutrino:
+\[\mathrm{p}\mathrm{e}^{-}\longrightarrow\mathrm{n}\nu_{\mathrm{e}}\]
+
+\begin{tikzpicture}
+\draw[style={boson}]
+ (0, 0) -- node[below] {$\mathrm{W}^{-}$} (2,0) ;
+   \draw[->] (1.5,-0.6)--(0.5,-0.6);
+      \draw[style={electron}]
+   (-1, -2) -- node[left] {p} (0, 0);
+  \draw[style={electron}]
+  (0, 0) -- node[left] {n} (-1, 2) ;
+  \draw[style={electron}]
+   (3, -2)  -- node[right] {$\mathrm{e}^{-}$} (2, 0) ;
+  \draw[style={electron}]
+  (2, 0) -- node[right] {$\nu_{\mathrm{e}}$} (3, 2) ;
+\end{tikzpicture}\\
+
+All of the above interactions involve the weak interaction, and they have all been experimentally observed.
+
